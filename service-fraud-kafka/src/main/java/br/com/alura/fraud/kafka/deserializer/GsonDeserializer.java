@@ -1,4 +1,4 @@
-package br.com.alura.fraud.kafka.serializer;
+package br.com.alura.fraud.kafka.deserializer;
 
 import java.util.Map;
 

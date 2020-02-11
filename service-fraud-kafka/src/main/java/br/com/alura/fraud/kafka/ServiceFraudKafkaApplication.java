@@ -13,7 +13,7 @@ public class ServiceFraudKafkaApplication {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		FraudDetectorService fraudDetectorService = new FraudDetectorService();
-		try (KafkaService service = new KafkaService(FraudDetectorService.class.getSimpleName(), "ECOMMERCE_NEW_ORDER",
+		try (KafkaService service = new KafkaService(FraudDetectorService.class.getSimpleName(), "ECOMMERCE_ORDER_APPROVED",
 				fraudDetectorService::parse, Order.class)) {
 			service.run();
 		}
